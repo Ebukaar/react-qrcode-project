@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import URL from './components/UrlQRgenerator';
+import Email from './components/EmailQRgenerator';
+import SMS from './components/SmsQRgenerator';
+// The above are the imported components.
+const App: React.FC = () => {
+ return (
+ <div className="Container">
+ <div className="Column1"> 
+ <URL /> 
+ {/* We have embedded the URL component in a div which has a classname column 1 */}
+ </div>
+ <div className="Column2">
+ <SMS />
+ {/* We have embedded the SMS component in a div which has a classname column 2 */}
+ </div>
+ <div className="Column3">
+ <Email />
+ {/* We have embedded the Email component in a div which has a classname column 3 */}
+ </div>
+ </div>
+ );
 }
-
 export default App;
+
+
+
